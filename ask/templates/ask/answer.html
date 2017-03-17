@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ask/style.css' %}" />
+</head>
+<body>
+<h2 id="question_text">Question text</h2>
+
+<form action="/answer/" method="post">
+    {% csrf_token %}
+    <textarea id="answer_form" name="answer_text" cols="40" rows="5" onfocus="this.value="></textarea>
+    <input class="buttons" id="submit_btn" type="submit" value="Submit"/>
+</form>
+
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ask/style.css' %}" />
+</head>
+<body>
+choose question
+{% for question in all_questions %}
+    <li> {{ question.question_text }} : {{ question.question_occurrence }} </li>
+{% endfor %}
+</body>
+</html>
+

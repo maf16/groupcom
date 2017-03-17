@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ask/style.css' %}" />
+</head>
+<body>
+<h1>Ask...</h1>
+<form action="/ask/" method="post">
+    {% csrf_token %}
+    <input type="search" name = "query"/>
+</form>
+
+
+</body>
+</html>

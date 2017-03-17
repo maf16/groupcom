@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ask/style.css' %}" />
+</head>
+<body>
+
+<h3 id="last_question">{{last_question}}</h3>
+<h2 id="similar_q">Similar questions...</h2>
+
+<button class = "buttons" id="left" type="button">{{suggested_questions.0}}</button>
+<button class = "buttons" id="center" type="button">{{suggested_questions.1}}</button>
+<button class = "buttons" id="right" type="button">{{suggested_questions.2}}</button>
+
+<button class = "buttons" id="keep" type="button">Keep original question</button>
+
+</body>
+</html>
+
+
+
+
+
+
