@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ask/style.css' %}" />
+</head>
+<body>
+
+<h3 id="last_question">{{last_question.text}}</h3>
+<h2 id="similar_q">Answered questions...</h2>
+
+<form action="/ask/answer/{{answered_questions.0.pk}}">
+    <input type="submit" value="{{answered_questions.0.text}}" class="buttons" id="left">
+</form>
+
+<form action="/ask/answer/{{answered_questions.1.pk}}">
+    <input type="submit" value="{{answered_questions.1.text}}" class="buttons" id="center">
+</form>
+
+<form action="/ask/answer/{{answered_questions.2.pk}}">
+    <input type="submit" value="{{answered_questions.2.text}}" class="buttons" id="right">
+</form>
+
+<form action="/ask/answer/{{last_question.pk}}">
+     <input type="submit" value="Make new question" class="buttons" id="keep">
+</form>
+
+</body>
+</html>
