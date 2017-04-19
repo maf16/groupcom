@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['192.168.1.244','localhost','0.0.0.0']
 
 INSTALLED_APPS = [
     'ask.apps.AskConfig',
-    'answer.apps.AnswerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
